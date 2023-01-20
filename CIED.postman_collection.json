@@ -1,0 +1,1263 @@
+{
+	"info": {
+		"_postman_id": "cf97b69e-2e70-4572-8dc8-0952cfc66a17",
+		"name": "CIED",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20534082"
+	},
+	"item": [
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/registration/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"registration",
+								""
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/logout/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "food_calories",
+			"item": [
+				{
+					"name": "get all food list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/food_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"food_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add food item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "ab",
+									"type": "text"
+								},
+								{
+									"key": "calorie",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/food_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"food_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get individual food item",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/food_edit/502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"food_edit",
+								"502afeee-70bc-4027-a9f9-bc2daa0dab9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit food item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "calorie",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/food_edit/502afeee-70bc-4027-a9f9-bc2daa0dab9e?",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"food_edit",
+								"502afeee-70bc-4027-a9f9-bc2daa0dab9e"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete food item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/food_edit/502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"food_edit",
+								"502afeee-70bc-4027-a9f9-bc2daa0dab9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all label list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/label_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"label_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add label",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+									"type": "text"
+								},
+								{
+									"key": "label",
+									"value": "abc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/label_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"label_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get individual label",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/label_edit/ee5bc428-5cee-44a6-aacd-fe552ce2c792",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"label_edit",
+								"ee5bc428-5cee-44a6-aacd-fe552ce2c792"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit  label",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "label",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/label_edit/ee5bc428-5cee-44a6-aacd-fe552ce2c792",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"label_edit",
+								"ee5bc428-5cee-44a6-aacd-fe552ce2c792"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete label",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "label",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/label_edit/ee5bc428-5cee-44a6-aacd-fe552ce2c792",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"label_edit",
+								"ee5bc428-5cee-44a6-aacd-fe552ce2c792"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all activity list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "label",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/activity_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"activity_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add activity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_name",
+									"value": "running",
+									"type": "text"
+								},
+								{
+									"key": "calorie_burnout",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/activity_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"activity_add"
+							],
+							"query": [
+								{
+									"key": "activity_name",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "calorie_burnout",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get individual activity details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_name",
+									"value": "running",
+									"type": "text"
+								},
+								{
+									"key": "calorie_burnout",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/activity_edit/a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"activity_edit",
+								"a6afdd5b-8b86-4630-a8fb-b6668e03fd00"
+							],
+							"query": [
+								{
+									"key": "activity_name",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "calorie_burnout",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit/ approve  activity details",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_name",
+									"value": "running",
+									"type": "text"
+								},
+								{
+									"key": "calorie_burnout",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/activity_edit/a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"activity_edit",
+								"a6afdd5b-8b86-4630-a8fb-b6668e03fd00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete  activity details Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7e8e8a3c96b1fe01659816ac47f083407499cf53",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity_name",
+									"value": "running",
+									"type": "text"
+								},
+								{
+									"key": "calorie_burnout",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/calories/activity_edit/a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"calories",
+								"activity_edit",
+								"a6afdd5b-8b86-4630-a8fb-b6668e03fd00"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userapp",
+			"item": [
+				{
+					"name": "get meal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "consumed",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/meal_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"meal_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add meal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+									"type": "text"
+								},
+								{
+									"key": "consumed",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/meal_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"meal_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get individual meal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+									"type": "text"
+								},
+								{
+									"key": "consumed",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/meal_edit/b4c004d4-ff39-45be-8262-5e602bba68e1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"meal_edit",
+								"b4c004d4-ff39-45be-8262-5e602bba68e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit individual meal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+									"type": "text"
+								},
+								{
+									"key": "consumed",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/meal_edit/b4c004d4-ff39-45be-8262-5e602bba68e1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"meal_edit",
+								"b4c004d4-ff39-45be-8262-5e602bba68e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete meal",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "food_name",
+									"value": "502afeee-70bc-4027-a9f9-bc2daa0dab9e",
+									"type": "text"
+								},
+								{
+									"key": "consumed",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/meal_edit/b4c004d4-ff39-45be-8262-5e602bba68e1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"meal_edit",
+								"b4c004d4-ff39-45be-8262-5e602bba68e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all activity record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity",
+									"value": "a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/record_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"record_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add activity record",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity",
+									"value": "a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/record_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"record_add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get individual activity record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity",
+									"value": "a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/record_edit/01e21246-1a6f-42a4-b532-76ce82e56609",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"record_edit",
+								"01e21246-1a6f-42a4-b532-76ce82e56609"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit activity record",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity",
+									"value": "a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/record_edit/01e21246-1a6f-42a4-b532-76ce82e56609",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"record_edit",
+								"01e21246-1a6f-42a4-b532-76ce82e56609"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete activity record",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity",
+									"value": "a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/record_edit/01e21246-1a6f-42a4-b532-76ce82e56609",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"record_edit",
+								"01e21246-1a6f-42a4-b532-76ce82e56609"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add vitynew acti",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token aac4cb13faa91b917922649e55401782d8879407",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "activity",
+									"value": "a6afdd5b-8b86-4630-a8fb-b6668e03fd00",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userapp/record_add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userapp",
+								"record_add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
